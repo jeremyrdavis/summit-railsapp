@@ -1,3 +1,10 @@
 <% provide(:title, 'Home') %>
-<h1>Summit App</h1>
-<p>Home page for my presentation at Red Hat Summit 2013</p>
+<div class="center hero-unit">
+  <h1>Welcome to Arrogantprogrammer's Summit App</h1>
+
+  <h2>This is the application for my Red Hat Summit presentation</h2>
+
+  <%= link_to "Login", '#', class: "btn btn-large btn-primary" %>
+</div>
+
+<%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
