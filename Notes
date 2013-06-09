@@ -10,6 +10,10 @@ torquebox deploy
 add torquebox gem/bundle install
 checkout 1-staffing-request
 
+ERRORS
+E: File to import not found or unreadable: bootstrap.
+F: upgrade bootstrap-sass to the latest and bounce the server
+
 QUESTIONS
 How to enforce job codes?
 - get a message and store in an application level variable?
