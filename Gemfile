@@ -9,6 +9,8 @@ gem 'activerecord-jdbcsqlite3-adapter'
 
 gem 'jruby-openssl'
 
+gem 'torquebox', '2.3.0.redhat.1'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
