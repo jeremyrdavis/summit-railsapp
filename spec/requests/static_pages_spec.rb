@@ -9,6 +9,25 @@ describe "StaticPages" do
       visit '/static_pages/home'
       page.should have_selector('title', :text=> 'Summit App | Home')
     end
+  
+  end
+
+  describe "About page" do
+    
+    it "should have the title,'About'" do
+      # check the title
+      visit '/static_pages/about'
+      page.should have_selector('title', :text=> 'Summit App | About')
+    end
+
+  end
+
+  describe "Help page" do
+
+    it "should have the title, 'Help'" do
+      visit '/static_pages/help'
+      page.should have_selector('title', :text=> 'Summit App | Help')
+    end
   end
 
 end
