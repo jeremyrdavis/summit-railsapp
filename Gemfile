@@ -26,6 +26,11 @@ group :assets do
 end
 
 group :development, :test do
+  
+  # add annotations to the model files
+  gem 'annotate', '2.5.0'
+
+  # integreation testing
   gem 'rspec-rails', '2.11.0'
   gem 'guard-rspec', '1.2.1'
   gem 'spork', '0.9.2'
