@@ -1,4 +1,17 @@
-Notes
+NOTES
 
 since gnote puked and destroyed my notes there...
 
+[jeremy@jeremy summit-railsapp]$ rvm use jruby-1.7.3@summit-railsapp
+[jeremy@jeremy summit-railsapp]$ rails new .
+rails generate scaffold User name:string email:string
+rake db:migrate
+torquebox deploy
+add torquebox gem/bundle install
+checkout 1-staffing-request
+
+QUESTIONS
+How to enforce job codes?
+- get a message and store in an application level variable?
+
+JIRA
