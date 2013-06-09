@@ -1,4 +1,7 @@
 SummitRailsapp::Application.routes.draw do
+  resources :staffing_requests
+
+
   resources :users
 
 

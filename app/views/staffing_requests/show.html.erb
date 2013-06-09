@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Job code:</b>
+  <%= @staffing_request.job_code %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @staffing_request.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_staffing_request_path(@staffing_request) %> |
+<%= link_to 'Back', staffing_requests_path %>
