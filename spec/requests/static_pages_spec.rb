@@ -6,7 +6,7 @@ describe "StaticPages" do
 
     it "should have the content 'Summit App'" do
       # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      visit '/static_pages/home'
+      visit root_path
       page.should have_selector('title', :text=> 'Summit App | Home')
     end
   
@@ -16,7 +16,7 @@ describe "StaticPages" do
     
     it "should have the title,'About'" do
       # check the title
-      visit '/static_pages/about'
+      visit about_path
       page.should have_selector('title', :text=> 'Summit App | About')
     end
 
@@ -25,7 +25,7 @@ describe "StaticPages" do
   describe "Help page" do
 
     it "should have the title, 'Help'" do
-      visit '/static_pages/help'
+      visit help_path
       page.should have_selector('title', :text=> 'Summit App | Help')
     end
   end
