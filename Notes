@@ -1,5 +1,9 @@
 NOTES
 
+TODO
+Implement ApprovingManager and relationship
+Implement StaffingRequest relationships
+
 since gnote puked and destroyed my notes there...
 
 [jeremy@jeremy summit-railsapp]$ rvm use jruby-1.7.3@summit-railsapp
