@@ -16,7 +16,11 @@
 
 <p>
 	<b>Manager:</b>
-	<%= "#{ @user.manager.name }, #{ @user.manager.email }" %>
+	<% if !@user.manager.nil? %>
+		<%= "#{ @user.manager.name }" %>
+	<% else %>
+		None
+	<% end %>
 </p>
 
 <%= link_to 'Edit', edit_user_path(@user) %> |

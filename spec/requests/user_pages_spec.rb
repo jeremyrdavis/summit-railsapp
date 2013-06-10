@@ -5,6 +5,7 @@ describe "User pages" do
   subject { page }
 
   describe "User profile page" do
+    # we will need someone in the db to select as a manager
     let(:user) { FactoryGirl.create(:user) }
     before { visit user_path(user) }
 
@@ -14,6 +15,7 @@ describe "User pages" do
 
   describe "Create user" do
 
+    before { FactoryGirl.create(:manager) }
     before { visit "/users/new" }
 
     let(:submit) { "Create" }
@@ -30,12 +32,12 @@ describe "User pages" do
     end
 
     describe "with valid information" do
-
       before do
         fill_in "Name",   with: "Example User"
         fill_in "Email",  with: "user@example.com"
         fill_in "Password", with: "foobar"
         fill_in "Confirmation", with: "foobar"
+        select "Derrick Kittler", :from => "user[manager_id]"
       end
 
       it "should create a user" do

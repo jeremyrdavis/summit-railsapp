@@ -11,7 +11,7 @@
 #
 
 class User < ActiveRecord::Base
-  attr_accessible :email, :name, :password, :password_confirmation
+  attr_accessible :email, :manager_id, :name, :password, :password_confirmation
   has_secure_password
 
   has_many :subordinates, :class_name => "User", :foreign_key => "manager_id"
