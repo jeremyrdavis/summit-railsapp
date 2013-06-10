@@ -1,6 +1,7 @@
 SummitRailsapp::Application.routes.draw do
 
-  get "users/new"
+  resources :staffing_requests
+  resources :users
 
   root to: 'static_pages#home'
 
@@ -10,10 +11,6 @@ SummitRailsapp::Application.routes.draw do
 
   match '/users', to: 'users#new'
    
-  resources :staffing_requests
-
-
-  resources :users
 
 
   # The priority is based upon order of creation:
