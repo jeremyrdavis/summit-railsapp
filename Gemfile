@@ -11,6 +11,8 @@ gem 'jruby-openssl'
 
 gem 'torquebox', '2.3.0.redhat.1'
 
+gem 'bcrypt-ruby', '3.0.1'
+
 
 # Gems used only for assets and not required
 # in production environments by default.
