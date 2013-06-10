@@ -19,7 +19,7 @@
       <%= f.password_field :password_confirmation %>
 
       <%= f.label :manager %>
-      <%= collection_select("manager", "manager_id", @users, "id", "name") %>
+      <%= collection_select("manager", "manager_id", @managers, "id", "name") %>
 
       <%= f.submit "Create", class: "btn btn-large btn-primary" %>
     <% end %>

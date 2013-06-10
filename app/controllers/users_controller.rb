@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   def new
     @user = User.new
-    @users = User.all
+    @managers = get_managers
   end
 
   def show
@@ -13,8 +13,13 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to @user  
     else
+      @managers = get_managers
       render 'new'
     end
+  end
+
+  def get_managers
+    return User.all
   end
   
 end
