@@ -4,5 +4,13 @@ FactoryGirl.define do
     email "jeremy.davis@redhat.com"
     password "foobar"
     password_confirmation "foobar"
+    manager { FactoryGirl.build(:manager) }
+  end
+
+  factory :manager, class: User do
+    name  "Derrick Kittler"
+    email "dkittler@redhat.com"
+    password "foobar"
+    password_confirmation "foobar"
   end
 end
