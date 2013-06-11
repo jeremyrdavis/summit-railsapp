@@ -19,7 +19,7 @@
 
 <h3>Open Requests</h3>
 <% if @user.staffing_requests.any? %>
-	<%= render @microposts %>
+	<%= render @user.staffing_requests %>
 <% else %>
 	No open requests
 <% end %>
