@@ -10,5 +10,10 @@
 #
 
 class StaffingRequest < ActiveRecord::Base
-  attr_accessible :job_code, :user_id
+  attr_accessible :job_code
+
+  belongs_to :user
+
+  validates :job_code, presence: true 
+  validates :user_id, presence: true 
 end
