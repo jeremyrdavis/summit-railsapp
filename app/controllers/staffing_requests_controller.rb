@@ -1,4 +1,6 @@
 class StaffingRequestsController < ApplicationController
+
+  include SessionsHelper
   # GET /staffing_requests
   # GET /staffing_requests.json
   def index
@@ -40,7 +42,7 @@ class StaffingRequestsController < ApplicationController
   # POST /staffing_requests
   # POST /staffing_requests.json
   def create
-    @staffing_request = StaffingRequest.new(params[:staffing_request])
+    @staffing_request = current_user.staffing_requests.build(params[:staffing_request])
 
     respond_to do |format|
       if @staffing_request.save
